@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: user-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/linkup-user
+    username: postgres
+    password: root
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: 9011
+  servlet:
+    context-path: /users
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+jwt:
+  secret-key: CVs23aGVCYGBHas34t34jcU32YGSAVCU45ysAcygsrewaCG
+  expiration: 86400000
